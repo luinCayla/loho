@@ -1,0 +1,28 @@
+footer{
+    width: 100%;        
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-end;
+    background: #fff;
+    a{
+        display: block;
+        height: 0.53rem;            
+        text-align: center;
+        color: #333333;
+        i{
+            font-size: 0.32rem;
+           display: block;
+           margin-top: -0.05rem;
+        }
+        span{
+            display: block;
+            font-size: .12rem;
+            margin-top: -0.13rem;
+        }
+    }
+}
