@@ -11,8 +11,8 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "api":{
-        "target":"http://m.loho88.com/api",
+      "/api":{
+        "target":"http://m.loho88.com",
         "changeOrigin": true, //
         "pathRewrite": {
           "^/api": ""

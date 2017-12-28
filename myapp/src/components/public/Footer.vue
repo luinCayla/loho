@@ -1,11 +1,12 @@
 <template>
-   
+    <footer id="footer">
         <ul  class="foot">
             <li @click="turnout(bar.name)" :key="bar.id" v-for='bar in tabbar' class="foot-bar" >
                 <i :class="'iconfont icon-'+bar.name"></i>
                 <span>{{bar.content}}</span>
             </li>
         </ul>
+    </footer>
     
     
 </template>

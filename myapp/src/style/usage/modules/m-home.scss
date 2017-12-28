@@ -1,3 +1,12 @@
+#home{
+    padding-top: .6rem;
+    padding-bottom:.53rem; 
+    width: 100%;
+    height: 100%;
+  
+
+}
+
 .home-head{
     width:100%;
     height:.6rem;
@@ -8,10 +17,22 @@
     color: #333;
     @include flexbox();
     @include justify-content(space-around);
-   
+    z-index: 999;
     .head-city{
-        padding-left: .3rem;
+        width: 1.20rem;
+        display: flex;
+       text-align: center;
+       justify-content: center;
+      
         color: #333;
+        span{
+            display: inline-block;
+            // vertical-align: middle;
+            // line-height: .24rem;
+        }
+        i{
+            font-size: .24rem;
+        }
     }
     .head-logo{        
         margin: auto;
@@ -30,9 +51,56 @@
     }
 }
 
-.home-ban{
-    padding-top: .6rem;
+
+.home-ban{   
+    height: 1.87rem;
+}
+
+.home-nav{
+    background: #fff;
+    width: 100%;
     height: 2.5rem;
+    .nav{
+        @include flexbox();
+        flex-wrap:wrap;
+        li{
+            width:25%;
+            height: auto;
+            padding-top:.28rem;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+            text-align: center;
+            img{
+                width: 0.48rem;
+                height: auto;
+                margin: 0 auto;
+            }
+            span{
+                display: block;
+                padding-top:.1rem; 
+            }
+        }
+    }
+}
+
+.home-img{
+    width: 100%;
+    height: 150px;
+    
+    img{
+        width: 100%;
+        height: auto;      
+        padding: 2.66%;
+    }
+}
+
+
+.mint-swipe-indicator{
+    opacity: 1;
+}
+.mint-swipe-indicator.is-active{
+    background: red;
 }
 
 
@@ -40,34 +108,35 @@
 
 
 
-
-
-
-.foot{ 
+footer{    
     width: 100%;        
     height: 0.53rem;            
     position: fixed;
     left: 0;
     bottom: 0;
     z-index: 99;
-    @include flexbox();
-    background: #fff;    
-    li{
+    background: #fff;
+    .foot{ 
         @include flexbox();
-        @include flex-direction(column);
-        @include flex();
-        @include justify-content(center);
-        @include align-items(center);
-        text-align: center;
-        color: #333333;
-        i{
-            font-size: 32px !important;
-          
-        }
-        span{
-            font-size: .12rem;
-            margin-top:-0.1rem;
-                 
+            
+        li{
+            margin-top: -.04rem;
+            @include flexbox();
+            @include flex-direction(column);
+            @include flex();
+            @include justify-content(center);
+            @include align-items(center);
+            text-align: center;
+            color: #333333;
+            i{
+                font-size: 32px !important;
+              
+            }
+            span{
+                font-size: .12rem;
+                margin-top:-0.1rem;
+                     
+            }
         }
     }
 }

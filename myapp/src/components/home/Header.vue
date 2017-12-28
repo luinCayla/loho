@@ -1,12 +1,12 @@
 <template>
     <header id="home-head" class="home-head">
         <router-link to="/" class="head-city">
-            <span>北京市</span> 
+            <span>北京</span> 
             <i class="iconfont icon-xia" ></i>
         </router-link>
         <div class="head-logo"></div>            
         <router-link to="/" class="head-cart">
-             <i class="iconfont icon-gouwuche" ></i>
+             <i class="iconfont icon-shopcart" ></i>
         </router-link>
          <router-link to="/" class="head-peo">
              <i class="iconfont icon-ren" ></i>
