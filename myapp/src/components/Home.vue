@@ -3,7 +3,7 @@
         <Header />
         <Banner />
 
-        <Footer />
+      
 
 
 
@@ -12,9 +12,9 @@
 </template>
 
 <script>
-    import Header from './public/Header.vue';
-    import Banner from './home/Banner.vue';
-    import Footer from './public/Footer.vue';
+    import Header from './home/Header';
+    import Banner from './home/Banner';
+   
 
     
 
@@ -26,7 +26,7 @@
             }
         },
         components:{
-            Header,Banner,Footer
+            Header,Banner
         },
         methods:{
 

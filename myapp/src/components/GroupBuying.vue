@@ -1,6 +1,6 @@
 <template>
     <div id="group-buying">
-
+        团购
     </div>
 
 </template>

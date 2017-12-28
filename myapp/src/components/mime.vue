@@ -1,6 +1,6 @@
 <template>
     <div id="mime">
-
+        我的
     </div>
 
 </template>

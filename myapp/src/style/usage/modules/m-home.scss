@@ -1,28 +1,73 @@
-footer{
+.home-head{
+    width:100%;
+    height:.6rem;
+    line-height: .6rem;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    color: #333;
+    @include flexbox();
+    @include justify-content(space-around);
+   
+    .head-city{
+        padding-left: .3rem;
+        color: #333;
+    }
+    .head-logo{        
+        margin: auto;
+        width: 72px;
+        height: 31px;
+        background: url(../../assets/images/logo.head.png) center no-repeat;
+        background-size: contain;
+    }
+    .head-cart,.head-peo{
+        width:.6rem;
+        text-align: center;
+        i{
+            color: #333;
+            font-size: .28rem !important;
+        }
+    }
+}
+
+.home-ban{
+    padding-top: .6rem;
+    height: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+.foot{ 
     width: 100%;        
+    height: 0.53rem;            
     position: fixed;
     left: 0;
     bottom: 0;
     z-index: 99;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: flex-end;
-    background: #fff;
-    a{
-        display: block;
-        height: 0.53rem;            
+    @include flexbox();
+    background: #fff;    
+    li{
+        @include flexbox();
+        @include flex-direction(column);
+        @include flex();
+        @include justify-content(center);
+        @include align-items(center);
         text-align: center;
         color: #333333;
         i{
-            font-size: 0.32rem;
-           display: block;
-           margin-top: -0.05rem;
+            font-size: 32px !important;
+          
         }
         span{
-            display: block;
             font-size: .12rem;
-            margin-top: -0.13rem;
+            margin-top:-0.1rem;
+                 
         }
     }
 }

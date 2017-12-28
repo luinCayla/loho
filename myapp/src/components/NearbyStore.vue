@@ -1,6 +1,6 @@
 <template>
     <div id="nearby-store">
-
+        附近体验店
     </div>
 </template>
 

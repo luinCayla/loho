@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {
       "api":{
         "target":"http://m.loho88.com/api",
-        "changeOrigin": true,
+        "changeOrigin": true, //
         "pathRewrite": {
           "^/api": ""
         }        
