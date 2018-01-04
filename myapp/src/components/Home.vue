@@ -4,7 +4,9 @@
         <Banner :bans='bans' />
         <Nav :menu='menu' />
         <ImgSrc :imgsrc='imgsrc'/>
-
+        <Recommend :popular='popular' />
+        <Classify :classify='classify' />
+        <Foot />
     </div>
 
 </template>
@@ -16,6 +18,9 @@
     import Banner from './home/Banner';
     import Nav from './home/Nav';
     import ImgSrc from './home/ImgSrc';
+    import Recommend from './home/Recommend';
+    import Classify from './home/Classify';
+    import Foot from './home/Footer'
 
     export default {
         name: 'home',
@@ -23,11 +28,17 @@
             return {
                bans:[],
                menu:[],
-               imgsrc:[]
+               imgsrc:[],
+               popular:{
+                   title:'',
+                    more:'',
+                    img:''
+               },
+               classify:[]
             }
         },
         components:{
-            Header,Banner,Nav,ImgSrc
+            Header,Banner,Nav,ImgSrc,Recommend,Classify,Foot
         },
         methods:{
             getData(){
@@ -38,7 +49,8 @@
                     that.bans = res.data.result.focus;
                     that.menu = res.data.result.cates;
                     that.imgsrc = res.data.result.ad[0].pic;
-
+                    that.popular = res.data.result.popular;
+                    that.classify = res.data.result.classify;
                 })
             }
         },
