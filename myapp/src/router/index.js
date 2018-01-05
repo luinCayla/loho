@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import Home from '@/components/home'
 import GroupBuying from '@/components/groupbuying'
 import Service from '@/components/Service'
 import NearbyStore from '@/components/NearbyStore'
