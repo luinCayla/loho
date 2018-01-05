@@ -1,11 +1,14 @@
 <template>
-    <div id="mime">
-        我的
+    <div id="mime" class="add-top">
+        <Header title="登录" />
+
+        
     </div>
 
 </template>
 
 <script>
+    import Header from '../public/Header'
 
     export default {
         name: 'mime',
@@ -15,7 +18,7 @@
             }
         },
         components:{
-
+            Header
         },
         methods:{
 
