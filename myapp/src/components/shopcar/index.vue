@@ -1,14 +1,14 @@
 <template>
-    <div id="nearby-store">
-        <Header title="附近体验店" />
+    <div id="shopcar">
+        <Header />
     </div>
+
 </template>
 
 <script>
-    import Header from './public/Header'
-
+    import Header from './Header'
     export default {
-        name: 'nearby-store',
+        name: 'shopcar',
         data () {
             return {
                 

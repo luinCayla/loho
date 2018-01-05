@@ -1,14 +1,14 @@
 <template>
     <div id="app">  
-        <router-view></router-view>  
-        <Footer /> 
        
+       
+        <router-view></router-view>  
     </div>
 </template>
 
 <script>
 
-import Footer from './components/public/Footer';
+
 
   
 export default {
@@ -20,7 +20,7 @@ export default {
         }
     },
     components:{
-        Footer
+      
     },
     methods:{
                
