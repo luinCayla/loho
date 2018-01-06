@@ -1,13 +1,18 @@
 <template>
-    <div id="group-buying">
-        <h1>团购</h1>
-        
+    <div id="group-buying" >
+       <Gbuying />
+       <Hbuying /> 
+       <Cbuying />
     </div>
 
 </template>
 
 <script>
+    import axios from 'axios'
 
+    import Cbuying from './Content';
+    import Hbuying from './Hide';
+    import Gbuying from './Header';
     export default {
         name: 'group-buying',
         data () {
@@ -16,10 +21,10 @@
             }
         },
         components:{
-
+            Gbuying,Hbuying,Cbuying
         },
         methods:{
-
+               
         } 
     }
 
