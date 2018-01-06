@@ -15,7 +15,7 @@
 
 
 <script>
-
+import bus from '../../module/bus'
     export default {
         name: 'shop-header',
          props:{
@@ -30,7 +30,9 @@
             }
         },
         methods:{
-
+            changeType(){           
+                bus.$emit("change-type")
+            }
         } 
     }
 
