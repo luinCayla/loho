@@ -1,12 +1,16 @@
 <template>
-    <div id="home">
-        <Header  />      
+    <div id="home" class="add-top">
+        <Header  />        
         <Banner :bans='bans' />
         <Nav :menu='menu' />
         <ImgSrc :imgsrc='imgsrc'/>
         <Recommend :popular='popular' />
         <Classify :classify='classify' />
-        <Foot />
+        <Bottom />
+        <Footer />
+        <router-view></router-view>  
+
+        <BackTop v-back-top v-scroll-show:300='isBackShow' :isShow='isBackShow' />
     </div>
 
 </template>
@@ -14,38 +18,41 @@
 <script>
     import axios from 'axios'
 
-    import Header from './home/Header';
-    import Banner from './home/Banner';
-    import Nav from './home/Nav';
-    import ImgSrc from './home/ImgSrc';
-    import Recommend from './home/Recommend';
-    import Classify from './home/Classify';
-    import Foot from './home/Footer'
+    import Header from './Header';
+    import Banner from './Banner';
+    import Nav from './Nav';
+    import ImgSrc from './ImgSrc';
+    import Recommend from './Recommend';
+    import Classify from './Classify';
+    import Bottom from './Bottom'
+    import Footer from './Footer';
+    import BackTop from '../public/BackTop'
 
     export default {
         name: 'home',
         data () {
             return {
-               bans:[],
-               menu:[],
-               imgsrc:[],
-               popular:{
-                   title:'',
+                bans:[],
+                menu:[],
+                imgsrc:[],
+                popular:{
+                    title:'',
                     more:'',
                     img:''
-               },
-               classify:[]
+                },
+                classify:[],
+                isBackShow:{value:false}
             }
         },
         components:{
-            Header,Banner,Nav,ImgSrc,Recommend,Classify,Foot
+            Header,Banner,Nav,ImgSrc,Recommend,Classify,Bottom,Footer,BackTop
         },
         methods:{
             getData(){
                 let that = this;
                 //http://m.loho88.com/index
                 axios.get('/api/index').then( res =>{
-                    console.log(res.data.result)
+                    // console.log(res.data.result)
                     that.bans = res.data.result.focus;
                     that.menu = res.data.result.cates;
                     that.imgsrc = res.data.result.ad[0].pic;
@@ -57,6 +64,7 @@
         created(){
             this.getData();
         }
+        
     }
 
 

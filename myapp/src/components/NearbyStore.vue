@@ -1,21 +1,20 @@
 <template>
     <div id="nearby-store">
-
-        
-        <Header  /> 
+        <Header title="附近体验店" /> 
         <Select />
         <Local />
         <Box  :box="box"/>
+       
     </div>
 </template>
 
 <script>
  import axios from 'axios'
 
- import Header from './near/Header';
  import Select from './near/Select';
  import Local from './near/Local';
  import Box from './near/Box';
+    import Header from './public/Header'
 
     export default {
         name: 'nearby-store',
@@ -26,7 +25,6 @@
         },
         components:{
             Header,Select,Local,Box,
-
         },
         methods:{
             getData(){

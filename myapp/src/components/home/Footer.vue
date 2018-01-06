@@ -1,54 +1,41 @@
 <template>
-    <div class="home-foot" id="home-foot" >
-        <h1 class="foot-botton"  @click="isShowInfo">你可能喜欢  
-            <i class="iconfont icon-xia"></i>
-        </h1>
-        <p v-if="isShow">点击加载更多...</p>
-        <div class="foot-info">
-            <div class="foot-info-top">
-                <div class="bot-left"> 
-                    <i class="iconfont icon-dingwei"></i>欢迎到体验店试戴
-                </div>
-                <div class="bot-right">
-                    <i class="iconfont icon-tell"></i>
-                    <article>预约热线：400-887-1920
-                        <span>(服务时间：9:00 - 23:00)</span>
-                    </article>                  
-                </div>
-            </div>
-            <div class="foot-info-img">
-                <img src="../../assets/images/logo.png" alt="">
-            </div>
-            <div class="foot-info-botton">
-                <h5>©2005-2016 深圳市乐活电子商务有限公司版权所有，并保留所有权利。</h5>
-            </div>
-            
-        </div>
-    </div>
-   
+    <footer id="home-foot" class="home-foot">
+        <ul  class="foot">
+            <li @click="turnout(bar.name)" :key="bar.id" v-for='bar in tabbar' class="foot-bar" >
+                <i :class="'iconfont icon-'+bar.name"></i>
+                <span>{{bar.content}}</span>
+            </li>
+        </ul>
+    </footer>
+    
+    
 </template>
 
 <script>
 
-
-
     export default {
-        name: 'home-foot',     
+        name: 'home-foot',
         data () {
             return {
-               isShow:false
+              tabbar:[
+                  {id:1,content:"首页",name:'home' },
+                  {id:2,content:"团购",name:'groupbuying'},
+                  {id:3,content:"客服",name:'service'},
+                  {id:4,content:"附近体验店",name:'nearbystore'},
+                  {id:5,content:"我的",name:'mime'},
+              ]
             }
         },
         methods:{
-           isShowInfo(){
-               this.isShow = !this.isShow;
-           }
+            turnout(name){
+                this.$router.push({name})
+            }
         } 
     }
 
 
 </script>
 
-<style scoped>
-
+<style lang='scss' scoped>
+   
 </style>
