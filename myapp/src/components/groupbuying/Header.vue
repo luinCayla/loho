@@ -2,11 +2,11 @@
     <div  id="g-head" >
       
        <h2 class="head-title">团购分类</h2>
-        <div class="head-ctrl-left">
-           <a class=" iconfont icon-left"></a>
-       </div>
+        <router-link class="head-ctrl-left"  to='/home'>
+           <i class=" toleft iconfont icon-left"></i>
+       </router-link>
        <div @click='changeType'  class="head-ctrl-right">
-           <a  class=" iconfont icon-caidan"></a>
+           <a  class=" toright iconfont icon-caidan"></a>
        </div>
             
 

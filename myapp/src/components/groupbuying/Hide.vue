@@ -1,9 +1,9 @@
 <template>
     <nav class="head-menu cl" style="display: block;" v-if="isShow">
-        <a class = "icon-home3 iconfont icon-house"  href="">首页</a>
-        <a class = "icon-user iconfont icon-member"  href="">会员中心</a>
-        <a class = "icon-cart iconfont icon-shopping"  href="">购物车</a>
-        <a class = "icon-comment iconfont icon-information"  href="">在线咨询</a>
+        <router-link class = "icon-home3 iconfont icon-house"  to="/home">首页</router-link>
+        <router-link class = "icon-user iconfont icon-member"  to="/mime">会员中心</router-link>
+        <router-link class = "icon-cart iconfont icon-shopping"  to="/shopcar">购物车</router-link>
+        <router-link class = "icon-comment iconfont icon-information"  to="/service">在线咨询</router-link>
     </nav> 
             
 
