@@ -49,7 +49,7 @@
                 <li class="wipe">
                     <i class='iconfont icon-check'></i>
                     <input type="text" placeholder="请输入短信验证码">
-                    <div class="send-code" @click="getMsgCode">发送验证码</div>
+                    <div class="send-code">发送验证码</div>
                 </li>               
             </ul>
          </div>
