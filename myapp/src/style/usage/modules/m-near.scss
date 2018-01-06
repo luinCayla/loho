@@ -1,0 +1,279 @@
+#near{
+    padding-top: .6rem;
+    // padding-bottom:.53rem; 
+    width: 100%;
+    height: 100%;  
+    @include flexbox();
+    @include flex-direction(column);
+}
+
+.near-head{
+    width:100%;
+    height:.6rem;
+    line-height: .6rem;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    color: #333;
+    @include flexbox();
+    @include justify-content(space-around);
+    
+    z-index: 999;
+    .near-city{
+        width: 1.20rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;      
+        color: #333;
+        
+        i{
+            font-size: .24rem;
+        }
+    }
+    .near-zi{        
+        margin: auto;
+        font-size:12px; 
+        height: 31px;
+        
+        background-size: contain;
+    }
+    
+    .near-cart,.near-peo{
+        width:.6rem;
+        text-align: center;
+        i{
+            color: #333;
+            font-size: .28rem !important;
+        }
+    }
+}
+
+
+
+//select
+
+
+// a:hover{
+//     text-decoration: none;
+// color: #fe6e00 ; 
+// }
+// a{
+//    color: #fe6e00 ; 
+// }
+// .router-link-active{
+    
+//       border-bottom:3px solid #fe6e00 ;
+      
+// }
+
+.select-box{
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+     background-color: #f9f9f9;
+}
+    .movied-nav{
+   
+    background-color: #f9f9f9;
+   
+    height: 46px;
+     border-bottom: solid #fe6e00 1px;
+    }
+    .movie-left{
+
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 46px;
+    color: #6a6a6a;
+    cursor: pointer;
+     line-height: 46px;
+    padding-bottom: 5px;
+
+    
+    }
+    .movie-right{
+   float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 46px;
+    padding-bottom: 5px;
+    color: #6a6a6a;
+    cursor: pointer;
+    }
+
+    //local
+
+    .local-box{
+    
+    // padding-bottom:.53rem; 
+    width: 100%;
+    height: 0.8rem;  
+    @include flexbox();
+    @include flex-direction(column);
+    background:gray ;
+            .local-nav{
+            height: 0.43rem;
+            width:100%;
+            background: white;
+            margin-top:18px; 
+
+            .local-left{
+                float:left;
+                width: 50%;
+                height: 100%;
+                text-align: center;
+                font-size: 12px;
+                line-height: 43px;
+                padding-bottom: 5px;
+                color: #6a6a6a;
+            }
+             .local-right{
+                float: right;
+                width: 50%;
+                height: 100%;
+                text-align: center;
+                font-size: 12px;
+                line-height: 46px;
+                padding-bottom: 5px;
+                color: #6a6a6a;
+                
+             }         
+
+
+           
+        }
+  
+}
+
+
+
+//nav
+.box-box{
+    
+    // padding-bottom:.53rem; 
+    width: 100%;
+    height: 3.6rem;  
+    @include flexbox();
+    @include flex-direction(column);
+    background:white ;
+
+    .box-nav{
+        height: 0.4rem;
+        width: 100%;
+        .box-small{
+            margin:0 10px;
+            
+            margin-top:0.1rem;
+            @include flexbox();
+            @include justify-content(space-between);
+
+           .box-top{
+               float:left;
+                width: 50%;
+                height: 100%;
+                font-size: 14px;
+                font-weight:800 ;
+                line-height: 20px;
+                
+                color: #444;
+           }
+            
+             
+        }
+
+    }
+    .box-import{
+        height: 2.6rem;
+        width:100%;
+        @include flexbox();
+        @include justify-content(center);
+         @include flex-direction(column);
+        
+         
+
+
+        .box-title{
+            
+            height:20px;
+            font-size: 12px;
+            line-height: 20px;
+            margin-left: .1rem;
+
+        }
+        .box-out{
+            text-align: center;
+            .box-tupian{
+            height: 2rem;
+            width:3.5rem;
+            border-radius: 5px;
+
+          
+        
+        }
+        }
+        
+        .box-local{
+           margin: 0 .1rem;
+             height: 100%; 
+            font-size: 10px;
+            line-height: 30px;
+             color: #444;
+            
+        }
+    }
+    .box-btn{
+        width:100%;
+        height:.6rem;
+        
+        
+            .box-bottom{
+            margin:0 10px;
+            height: .44rem;
+            text-align: center;
+
+            
+           
+            @include flexbox();
+            @include justify-content(space-between);
+
+           .box-tel{
+              
+                width: 50%;
+                height: 100%;
+                font-size: 12px;
+                font-weight:800 ;
+                line-height: .44rem;
+                text-align: center;
+                border-radius: 4px;
+                color: #fff;
+                background:#e8343b ;
+           }
+            .box-large{
+              
+                width: 50%;
+                height: 100%;
+                 text-align: center;
+                 .box-phone{
+                     height: 32px;
+                     width: 32px;
+                     line-height: .44rem;
+                     text-align: center;
+                     font-size: 32px;
+                     color: #e8343b;
+
+                 }
+
+                
+           }
+            
+        }
+       
+    }
+
+}
