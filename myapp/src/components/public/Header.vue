@@ -4,7 +4,7 @@
             <i class="iconfont icon-left" ></i>
         </router-link>       
         <div class="choose" >{{title}}</div>                                    
-        <router-link to="/" class="icon">
+        <router-link to="/shopcar" class="icon">
              <i class="iconfont icon-shopcar" ></i>
         </router-link>
          <router-link to="/" class="icon">

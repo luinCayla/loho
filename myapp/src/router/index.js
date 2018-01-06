@@ -7,10 +7,12 @@ import NearbyStore from '@/components/NearbyStore'
 import Mime from '@/components/mime'
 import City from '@/components/home/city'
 import ShopCar from '@/components/shopcar'
+import Register from '@/components/mime/Register'
 
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [
         { path: '', redirect: '/home' },
         {
@@ -46,6 +48,11 @@ export default new Router({
             path: '/shopcar',
             name: 'shopcar',
             component: ShopCar
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: Register
         }
     ]
 })

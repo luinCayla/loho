@@ -60,7 +60,7 @@
                 let that = this;
                 //http://m.loho88.com/store/clist
                 axios.get('/api/store/clist').then( res =>{
-                    console.log(res.data.result)
+                    // console.log(res.data.result)
                     that.hot = res.data.result.hot;
                     that.letters = res.data.result.letters;
                     that.list = res.data.result.list;
