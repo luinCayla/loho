@@ -1,0 +1,40 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+   a{
+       height: .6rem;
+       text-align: center;
+       float: left;
+       width: 1rem;
+    &:nth-child(1){
+        color: #000;
+        background: #fff;
+        i{
+            display: block;
+           padding-top: .07rem;
+        }
+        span{
+            display: block;
+        }
+    }
+
+    &:nth-child(2){
+        color: #000;
+        background: #fff;
+        i{
+            display: block;
+            padding-top: .07rem;
+        }
+        span{
+            display: block;
+        }
+    }
+
+    &:nth-child(3){
+        width: 2.14rem;
+        background: orange;
+        line-height: .6rem;
+        color: #fff;
+    }
+   }
+}

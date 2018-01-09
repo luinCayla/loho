@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
 import GroupBuying from '@/components/groupbuying'
+import Details from '@/components/details'
 import Service from '@/components/Service'
 import NearbyStore from '@/components/NearbyStore'
 import Mime from '@/components/mime'
@@ -21,8 +22,14 @@ export default new Router({
         {
             path: '/groupbuying',
             name: 'groupbuying',
-            component: GroupBuying
-        },
+            component: GroupBuying,
+            },
+            {
+                path:'/details',
+                name:'details',
+                component: Details,
+               
+            },
         {
             path: '/service',
             name: 'service',

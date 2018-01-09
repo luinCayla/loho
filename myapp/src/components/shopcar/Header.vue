@@ -7,7 +7,7 @@
             <i class="iconfont icon-shopping" ></i>
             购物车
         </div>                                    
-        <div class="icon">
+        <div  class="icon"  @click="changeType">
              <i class="iconfont icon-caidan" ></i>
         </div>
     </header>
@@ -15,7 +15,7 @@
 
 
 <script>
-import bus from '../../module/bus'
+    import bus from '../../modules/bus'
     export default {
         name: 'shop-header',
          props:{

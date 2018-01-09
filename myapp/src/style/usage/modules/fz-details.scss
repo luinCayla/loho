@@ -1,0 +1,222 @@
+
+#d-header{
+    width: 100%;
+    height: .5rem;
+    background: #fff;
+    a{
+        color: #000;
+        line-height: .5rem;
+        font-size: .28rem;
+    }
+    .toleft{
+        float: left;
+    }
+    h5{
+        float: right;
+        color: #000;
+        font-size: .28rem;
+        line-height: .5rem;
+    }   
+    .tomiddle{
+        padding-right: .3rem;
+        float: right;
+    }
+}
+
+
+.home-ban{
+    .img-box{
+        padding-top: .8rem;
+        // overflow: hidden;
+        background: #fff;
+        height: 2.63rem;
+        img{
+            width: 100%;
+            height:1.63rem;
+        }
+    }
+    .shade{
+        position: relative;
+        width: 100%;
+        height: .8rem;
+        padding-top:.1rem;
+        background: -webkit-linear-gradient(top,#fff,#c8c8c8
+       );
+        span{
+            display: block;
+            position: relative;
+            top: 80%;
+            left: 48%;
+            width: .09rem;
+            height:.09rem;
+            background: red;
+            border-radius: 50%;
+        }
+    }
+    
+
+}
+
+#explain{
+    margin-top: 1.6rem;
+  
+    
+    .introduct{  
+        background: #fff;
+        border-bottom: 1px solid #c8c8c8;
+        overflow: hidden;
+        padding-top: .1rem;
+        .small-text{
+            float: left;
+            padding-left: .1rem;
+           
+            width: 2.88rem;
+            height:.44rem;
+        }
+        .share-ex{
+            position: relative;           
+            float: right;
+            padding-right: .1rem;
+            margin-bottom: .1rem;
+            border-left: 1px solid #c8c8c8;
+            span,p{
+                padding-left: .1rem;
+            }
+        }
+       
+    }
+    .share-sh{
+        width: 1.73rem;
+        height: .55rem;
+        background: #000;
+        position: absolute;
+        top:0;
+        right: 50px;
+        a{
+            font-size: .3rem;   
+           
+        }
+        .wx{ 
+            position: relative;
+            left:.1rem;
+            line-height: .55rem;
+        }
+        .qq{ 
+            position: relative;
+            left:.4rem;
+            line-height: .55rem;
+        }
+        .wb{ 
+            position: relative;
+            left:.65rem;
+            line-height: .55rem;
+        }
+    }
+    ul{
+        background: #fff;
+        height: .52rem;
+        display: flex;
+        justify-content: space-between;
+        li{
+            line-height: .52rem;
+           
+            span{
+                color: #e8343b;
+                font-size: 20px;
+                padding-left: .1rem;
+            }
+        }
+        .number{
+            i{
+                padding-right: .1rem;
+            }
+        }
+    }
+    .gray{
+        overflow: hidden;
+        background: #c8c8c8;
+        height: .4rem;
+        line-height: .4rem;
+        .left{
+            float: left;
+            
+        }
+        .rig{
+            float: left;
+            i{
+                padding-left: .1rem;
+            }
+        }
+    }
+    .position{
+        background: #fff;
+        padding-bottom: .1rem;
+        border-bottom: 2px solid #c8c8c8;
+        .sea{
+            height: .4rem;
+            line-height: .4rem;
+            padding-left: .1rem;
+        }
+        .length{
+            height: .18rem;
+            line-height: .18rem;
+            i{
+                padding-left: .1rem;
+                color: #000;
+            }
+            span{
+                // padding-left: .05rem;
+                font-size: 12px;
+                em{
+                    color: orange;
+                    padding-left: .1rem;
+                }
+            }
+        }
+        .det{
+            width: 100%;
+            height:.48rem;
+           
+           
+            p{
+                display: inline-block;
+                font-size: .07rem;
+                width: 3.26rem;
+                padding-top:.1rem;
+                padding-left: .1rem;
+              
+            }
+            span{
+                line-height: .48rem;
+                padding-left: .2rem;
+                font-size: .3rem;
+                color: red;
+            }
+        }
+    }
+    .store{
+        width: 100%;
+        height: .48rem;
+        line-height: .48rem;
+        background: #fff;
+        a{
+            color: #000;
+            padding-left: .1rem;
+            em{
+                color: red;
+            }
+        }
+        i{
+            padding-left: 1.6rem;
+            font-size: 20px;
+        }
+        
+    }
+    .blan{
+        width: 100%;
+        height: .1rem;
+        background:#c8c8c8;
+    }
+    
+}
+

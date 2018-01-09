@@ -16,7 +16,7 @@
 
  
 <script>
-    import bus from '../../module/bus'
+    import bus from '../../modules/bus'
     export default {
        name: 'g-header',
        data () {

@@ -1,0 +1,22 @@
+
+
+.choose{
+    background: #fff;
+    height: .5rem;
+    line-height: .5rem;
+   a{
+       text-align: center;
+      width:1.38rem;
+       font-size: .15rem;
+       display: block;                                  
+       float: left;
+       color: #000;
+       &:nth-child(2){
+           border-left: 1px solid rgb(209, 208, 208);
+       }
+       &:nth-child(3){
+        border-left: 1px solid rgb(209, 208, 208);
+    }
+   }
+
+}

@@ -1,16 +1,17 @@
 <template>
     <div id="shopcar">
         <Header />
-        <Hbuying />
+        <Hide />>
     </div>
 
 </template>
 
 <script>
-import axios from 'axios'
 
-    import Header from './Header'
-    import Hbuying from './Hide'
+
+    import Header from './Header';
+     import Hide from '../groupbuying/Hide';
+
     export default {
         name: 'shopcar',
         data () {
@@ -19,7 +20,7 @@ import axios from 'axios'
             }
         },
         components:{
-            Header,Hbuying
+            Header,Hide
         },
         methods:{
 

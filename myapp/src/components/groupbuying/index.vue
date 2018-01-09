@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+
 
     import Cbuying from './Content';
     import Hbuying from './Hide';

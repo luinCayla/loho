@@ -7,15 +7,15 @@
         <router-link to="/" class="icon">
              <i class="iconfont icon-shopcar" ></i>
         </router-link>
-         <router-link to="/" class="icon">
+         <a class="icon"   @click="changeType">
              <i class="iconfont icon-memu" ></i>
-        </router-link>
+        </a>
     </header>
 </template>
 
 
 <script>
-
+    import bus from '../../modules/bus';
     export default {
         name: 'city-header',
          props:{
@@ -30,7 +30,9 @@
             }
         },
         methods:{
-
+            changeType(){           
+                bus.$emit("change-type")
+        }
         } 
     }
 
