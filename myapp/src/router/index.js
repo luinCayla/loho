@@ -8,8 +8,8 @@ import Mime from '@/components/mime'
 import City from '@/components/home/city'
 import ShopCar from '@/components/shopcar'
 import Register from '@/components/mime/Register'
-import AppOn from '@/components/near/AppOn'
-import AppNow from '@/components/near/AppNow'
+import AppOn from '@/components/nearbystore/AppOn'
+import AppNow from '@/components/nearbystore/AppNow'
 
 Vue.use(Router)
 
