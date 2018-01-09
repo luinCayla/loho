@@ -1,6 +1,6 @@
 <template>
     <div id="mime" class="add-top">
-        <Header title="手机快速注册" />      
+        <Header title="手机快速注册" />
         <div  class="mime-login-check">
             <ul class="login-check">
                 <li>
@@ -9,15 +9,15 @@
                 </li>
                 <li>
                    <span>图形验证码</span>
-                    <input type="text" placeholder="请输入图形验证码" v-model="imgNum">
+                    <input type="text" placeholder="请输入图形验证码" v-model="imgCode">
                     <div class="img-code">
-                        <img :src="getImg" alt="" @click="getImgSrc">
+                        <img :src="getImgSrc" alt="" @click="getImgCode">
                     </div>
                 </li>
                  <li>
                    <span>验证码</span>
                     <input type="text" placeholder="请输入短信验证码" v-model="phoneCode">
-                    <div class="send-code">发送验证码</div>
+                    <div class="send-code" @click="getMsgCode">发送验证码</div>
                 </li>
                  <li>
                    <span>密码</span>
@@ -34,7 +34,7 @@
 
         <p class="mime-agree">完成注册表示您已看过并接受<a>《LOHO用户协议》</a></p>
 
-        <div class="mime-reg login-false">完成注册</div>
+        <router-link class="login-reg login-false" to="/mime">完成注册 </router-link>
 
             
 
@@ -44,6 +44,8 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     import Header from '../public/Header'
 
     export default {
@@ -51,11 +53,11 @@
         data () {
             return {
                 phone:'',
-                imgNum:'',
-                getImg:'http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random(),
+                imgCode:'',
                 phoneCode:'',
                 pasd:'',
-                rpasd:''
+                rpasd:'',
+                getImgSrc:'http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random(),
 
             }
         },
@@ -64,11 +66,11 @@
         },
         methods:{
             //http://m.loho88.com/code/mobile/getCaptchaCode?0.44347008390430775
-            getImgSrc(){
-                this.getImg = 'http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random();
+            getImgCode(){
+                this.getImgSrc = 'http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random();
             },
             getMsgCode(){ //获取短信验证码
-               
+               //http://m.loho88.com/uc/mobile/register/code?captcha=4869&mobile=13522535723
                 if(this.phone){ //验证 手机号是否符合规范
 
                 }
@@ -76,16 +78,23 @@
 
                 }
                 //获取短信验证码
-                axios.post(`/api/uc/mobile/register/code?captcha=${this.imgCaptcha}&mobile=${this.phone}`).then(res=>{
+                axios.post(`/api/uc/mobile/register/code?captcha=${this.imgCode}&mobile=${this.phone}`).then(res=>{
                     console.log(res.data)
                 })
-            
+             
             }
 
         } 
     }
 
-
+/*
+function copyCookie(str){
+    var arr = str.split('; ');
+    arr.forEach(function(ele){
+        document.cookie = ele;
+    })
+}
+*/
 </script>
 
 <style scoped>

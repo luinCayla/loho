@@ -68,6 +68,9 @@
             @include flex-direction(column);
             @include justify-content(center);
             text-align: center;
+            a {
+                color: #333;
+            }
             img {
                 width: 0.48rem;
                 height: auto;

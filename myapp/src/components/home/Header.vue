@@ -8,7 +8,7 @@
         <router-link to="/shopcar" class="icon">
              <i class="iconfont icon-shopcart" ></i>
         </router-link>
-         <router-link to="/mime" class="icon">
+         <router-link to="/login" class="icon">
              <i class="iconfont icon-ren" ></i>
         </router-link>
     </header>

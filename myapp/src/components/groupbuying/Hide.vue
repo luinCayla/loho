@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import bus from '../../module/bus'
+    import bus from '../../modules/bus'
     export default {
         name: 'group-hide',
         data () {
