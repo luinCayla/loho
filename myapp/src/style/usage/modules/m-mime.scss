@@ -1,143 +1,218 @@
-.mime-banner {
+.mime-bg {
     width: 100%;
-    height: 2rem;
+    height: 1.4rem;
+    background: url(http://img.loho88.com/images/loho-m/bg1.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: .1rem 0;
+    text-align: center;
     img {
-        width: 100%;
-        height: 100%；
-    }
-}
-
-.mime-login-cap {
-    width: 100%;
-    height: .5rem;
-    @include flexbox();
-    @include justify-content(space-between);
-    div {
-        width: 50%;
-        height: .5rem;
-        line-height: .5rem;
-        background: #fff;
-        text-align: center;
-    }
-    span {
-        background: #fff;
-        line-height: .5rem;
-        color: #acacac;
-    }
-    .active {
-        color: #e8343b;
-        border-bottom: .02rem solid #e8343b
-    }
-}
-
-.mime-login-check {
-    .forget-pswd {
-        padding-top: .1rem;
-        padding-left: .25rem;
-    }
-}
-
-.login-check {
-    margin-top: .1rem;
-    background: #fff;
-    border-bottom: .01rem solid #e1e1e1;
-    li {
-        width: 100%;
-        height: .48rem;
-        line-height: .48rem;
-        @include flexbox();
-        // @include justify-content(space-between);
-        input {
-            display: block;
-            height: .48rem;
-            line-height: .48rem;
-            @include flex();
-            border: none;
-            border-bottom: .01rem solid #e1e1e1;
-        }
-        i {
-            padding-right: .1rem;
-            margin-left: .2rem;
-            font-size: 24px;
-            vertical-align: middle;
-            border-bottom: .01rem solid #e1e1e1;
-        }
-    }
-    span {
         display: block;
-        margin-left: .1rem;
-        margin-right: .13rem;
-        width: 25%;
-        text-align: center;
-        border: none;
+        margin: 0 auto;
+        width: 22%;
+        margin-bottom: .1rem;
     }
-    .wipe {
-        border: none;
+    span {
+        display: inline-block;
+        color: #FFF;
+        margin: 0 auto;
+        padding: .02rem .2rem;
+        background-color: rgba(0, 0, 0, .33);
+        border-radius: 20px;
+        font-size: 16px;
     }
 }
 
-.mime-reg {
+.mime-order {
+    width: 100%;
+    height: 0.78rem;
+    background: #fff;
+    margin-bottom: .1rem;
+    .order-list {
+        padding-top: .1rem;
+        border-top: 1px solid #E7E7E7;
+        border-bottom: 1px solid #F8F8F8;
+        @include flexbox();
+        .foot-bar {
+            display: block;
+            margin-top: -.04rem;
+            @include flexbox();
+            @include flex-direction(column);
+            @include flex();
+            @include justify-content(center);
+            @include align-items(center);
+            text-align: center;
+            color: #333333;
+            i {
+                font-size: 32px !important;
+            }
+            span {
+                font-size: .12rem;
+                margin-top: -0.1rem;
+            }
+        }
+    }
+}
+
+.mime-cash {
     width: 100%;
     height: .6rem;
-    line-height: .6rem;
+    background: #fff;
+    margin-bottom: .01rem;
+    padding: 0 .25rem;
+    color: #333;
     @include flexbox();
+    @include justify-content(space-between);
+    .cash-left,
+    .cash-right {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+    }
+    .cash-left {
+        i {
+            font-size: .28rem;
+        }
+        .cash-cap {
+            margin-left: .1rem;
+            h5 {
+                font-size: .16rem;
+            }
+            p {
+                font-size: .16rem;
+            }
+        }
+    }
+    .cash-right {
+        span {
+            margin-right: .1rem;
+        }
+        label {
+            color: red;
+        }
+        i {
+            margin-right: -0.03rem;
+        }
+    }
+}
+
+.cash-info {
+    height: .5rem;
+}
+
+.mime-info {
+    margin-top: .1rem;
+}
+
+.mime-head {
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    background: #fff;
+    position: relative;
+    top: 0;
+    color: #333;
+    z-index: 9;
+    .mime-center {
+        position: absolute;
+        top: 0;
+        left: 1.5rem;
+        font-size: 18px;
+    }
+    .mime-right {
+        // width: 1rem;
+        position: absolute;
+        top: 0;
+        right: .1rem;
+        @include flexbox();
+        a {
+            display: block;
+        }
+        .head-icon {
+            width: .42rem;
+            text-align: center;
+            i {
+                color: #333;
+                font-weight: bold;
+                font-size: .24rem;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.login-out {
+    width: 100%;
+    height: 6.6rem;
+    background: url(http://img.loho88.com/images/loho-m/logout_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: .2rem;
+    .login-out-box {
+        width: 100%;
+        border-radius: .08rem;
+        background-color: rgba(0, 0, 0, .24);
+        padding: .2rem 0;
+        img {
+            display: block;
+            width: 40%;
+            margin: 0 auto;
+        }
+        .login-out-content {
+            padding: .19rem;
+            color: #f3f3f3;
+            font-size: .16rem;
+            line-height: 1.6;
+        }
+        .login-out-botton {
+            @include flexbox();
+            border-top: 1px solid rgba(0, 0, 0, .14);
+            padding: .1rem .1rem 0;
+            .login-out-botton-left {
+                width: 45%;
+                img {
+                    width: 100px;
+                    margin: 0 auto;
+                    border-radius: 8px;
+                }
+            }
+            .login-out-botton-right {
+                width: 55%;
+                padding-top: .15rem;
+                p {
+                    &:first-child {
+                        font-size: .06rem;
+                        font-weight: bold;
+                        color: #FFF;
+                        margin: .2rem 0 .05rem;
+                    }
+                    &:last-child {
+                        font-size: .06rem;
+                        color: #ececec;
+                    }
+                }
+            }
+        }
+    }
+    .login-exit {
+        display: block;
+        text-align: center;
+        padding: .1rem 0;
+        background-color: rgba(0, 0, 0, .46);
+        color: #FFF;
+        border-radius: .2rem;
+        margin-top: .3rem;
+        font-size: 14px;
+    }
+}
+
+.my-info-content {
+    padding-top: .1rem;
+}
+
+.save-info {
     position: fixed;
     bottom: 0;
-    @include justify-content(center);
-    a {
-        display: block;
-        width: 50%;
-        height: .6rem;
-        line-height: .6rem;
-        text-align: center;
-        background: #fff;
-        color: #333;
-    }
-    .login-false {
-        background: #ccc;
-        color: #acacac;
-    }
 }
 
-.img-code {
-    width: 1.2rem;
-    height: .48rem;
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.send-code {
-    width: 1.2rem;
-    height: .48rem;
-    background: #e8343b;
-    color: #fff;
-    text-align: center;
-}
-
-.login-false {
-    background: #ccc;
-    color: #acacac;
-}
-
-.login-true {
-    background: #e8343b;
-    color: #fff;
-}
-
-.mime-agree {
-    display: block;
-    width: 100%;
-    height: .42rem;
-    line-height: .42rem;
-    text-align: center;
-    // margin: 0 auto;
-    font-size: 12px;
-    position: fixed;
-    bottom: .6rem;
-    a {
-        color: #e8343b;
-    }
+.mint-cell-wrapper {
+    font-size: 14px;
 }

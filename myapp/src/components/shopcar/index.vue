@@ -10,7 +10,7 @@
 import axios from 'axios'
 
     import Header from './Header'
-    import Hbuying from './Hide'
+    import Hbuying from '../groupbuying/Hide'
     export default {
         name: 'shopcar',
         data () {

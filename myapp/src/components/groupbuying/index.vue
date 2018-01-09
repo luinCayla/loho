@@ -1,7 +1,7 @@
 <template>
     <div id="group-buying" >
        <Gbuying />
-       <Hbuying /> 
+       <Hide /> 
        <Cbuying />
     </div>
 
@@ -11,7 +11,7 @@
     import axios from 'axios'
 
     import Cbuying from './Content';
-    import Hbuying from './Hide';
+    import Hide from './Hide';
     import Gbuying from './Header';
     export default {
         name: 'group-buying',
@@ -21,7 +21,7 @@
             }
         },
         components:{
-            Gbuying,Hbuying,Cbuying
+            Gbuying,Cbuying,Hide
         },
         methods:{
                

@@ -1,94 +1,64 @@
 <template>
-    <div id="mime" class="add-top">
-        <Header title="登录" />
-        <div class="mime-banner">
-            <img src="../../assets/images/login-banner.png" alt="">
-        </div>
-        <div class="mime-login-cap">
-            <div   @click="isShow=false" >手机号快速登录</div>
-            <span>|</span>
-            <div @click="isShow=true"  >账号密码登录</div>
-        </div>
-
-        <div  class="mime-login-check" v-if="isShow">
-            <ul class="login-check" >
-                <li>
-                    <i class='iconfont icon-geren'></i>                    
-                    <input type="text" placeholder="请输入手机号">                               
-                </li>
-                <li>
-                    <i class='iconfont icon-suo'></i>
-                    <input type="text" placeholder="请输入密码">
-                </li>
-                <li class="wipe">
-                    <i class='iconfont icon-save'></i>
-                    <input type="text" placeholder="请输入验证码">
-                    <div class="img-code">
-                        <img :src="getImg" alt="" @click="getImgSrc">
-                    </div>
-                </li>
-            </ul>
-                <p class="forget-pswd">
-                    忘记密码？
-                </p>
-
-         </div>
-         <div clsass='mime-login-check' v-else>
-            <ul class="login-check" >
-                <li>
-                    <i class='iconfont icon-phone'></i>
-                    <input type="text" placeholder="请输入您的手机号码">
-                </li>
-                <li>
-                    <i class='iconfont icon-save'></i>
-                    <input type="text" placeholder="请输入图片验证码">
-                    <div class="img-code">
-                        <img :src="getImg" alt="" @click="getImgSrc">
-                    </div>
-                </li>
-                <li class="wipe">
-                    <i class='iconfont icon-check'></i>
-                    <input type="text" placeholder="请输入短信验证码">
-                    <div class="send-code">发送验证码</div>
-                </li>               
-            </ul>
-         </div>
-       
-
-        <div class="mime-reg">
-            <router-link to="register">注册</router-link>
-            <router-link class="login-false" to=''>登录</router-link>
-        </div>
+    <div id="mime " >
+        <Header title="会员中心" >
+            <router-link to="/home" class="icon-back" slot="left"> 
+                <i class="iconfont icon-left" ></i>
+            </router-link>       
+            <div class="mime-right"  slot="right">
+                <router-link to="/home" class="head-icon">
+                    <i class="iconfont icon-zhuye" ></i>
+                </router-link>
+                <router-link to="/shezhi" class="head-icon" >
+                    <i class="iconfont icon-shezhi" ></i>
+                </router-link>
+            </div>               
+        </Header>
             
+        <div class="mime-bg">
+            <img :src="imgSrc" alt="">
+            <span>{{userName}}</span>
+        </div>
+        <Order />
+        <router-view></router-view>
+        <router-link class="mime-cash" to="/coupon">
+            <div class="cash-left">
+                <i class="iconfont icon-qia"></i>
+                <div class="cash-cap">
+                    <h5>我的现金券</h5>
+                    <span>积分余额：0</span>
+                </div>
+            </div>
+            <div class="cash-right">
+                <span><label>0</label>张</span> 
+                 <i class="iconfont icon-right"></i>
+            </div>
+        </router-link>
+        <Info />
 
-       
     </div>
-
 </template>
 
 <script>
-    import axios from 'axios'
-    import Header from '../public/Header'
+
+
+
+    import Header from './Header';
+    import Order from './Order';
+    import Info from './Message' 
 
     export default {
         name: 'mime',
         data () {
             return {
-                isActive:false,
-                isShow:false,
-                getImg:'http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random(),
-               
+                imgSrc :'http://img.loho88.com/images/loho-m/index_logo.png',
+                userName:"lhsj_12345678911"
             }
         },
         components:{
-            Header
+            Header,Order,Info
         },
         methods:{
-            getImgSrc(){//获取图片验证码
-                this.getImg ='http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random();
-            }
 
-            
         } 
     }
 
