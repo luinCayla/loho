@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
 import GroupBuying from '@/components/groupbuying'
-import Service from '@/components/Service'
+import Service from '@/components/service'
 import NearbyStore from '@/components/nearbystore'
 import Mime from '@/components/mime'
 import Login from '@/components/login'
@@ -56,11 +56,11 @@ export default new Router({
             //name: 'nearbystore',
             component: NearbyStore,
             children: [
-                     {path:'',redirect: 'now',name:'nearbystore'},
-                     {path:'now',component:AppNow,name:'now'},
-                     {path:'on',component:AppOn,name:'on'}
+                { path: '', redirect: 'now', name: 'nearbystore' },
+                { path: 'now', component: AppNow, name: 'now' },
+                { path: 'on', component: AppOn, name: 'on' }
 
-                   ]
+            ]
         },
         {
             path: '/mime',
