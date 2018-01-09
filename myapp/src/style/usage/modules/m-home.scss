@@ -413,8 +413,10 @@
         }
         .cityname {
             @include justify-content(start);
+            background: #fff;
             li {
                 margin-right: .0126rem;
+                border-right: .01rem solid #e1e1e1;
             }
         }
     }

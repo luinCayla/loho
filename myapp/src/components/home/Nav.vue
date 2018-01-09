@@ -1,11 +1,9 @@
 <template>
     <nav class="home-nav" id="home-nav">
         <ul class="nav" >
-            <li v-for="(nav,i) in menu" :key="i" >
-                <router-link  :to=' "/list/"+ nav.cid +"/"+nav.tid+"/"+nav.tag'>
-                    <img :src="nav.pic" alt="">
-                    <span>{{nav.tag}}</span>               
-                </router-link>
+            <li v-for="(nav,i) in menu" :key="i"  @click="a(nav)" >              
+                <img :src="nav.pic" alt="">
+                <span>{{nav.tag}}</span>                              
             </li>
         </ul>
     </nav>
@@ -23,7 +21,9 @@
             }
         },
         methods:{
-
+            a(nav){
+                this.$router.push(nav.cid?"/list/"+ nav.cid +"/"+nav.tid+"/"+nav.tag : '/nearbystore')
+            }
            
         } 
     }

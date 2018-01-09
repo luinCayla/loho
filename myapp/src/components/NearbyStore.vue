@@ -1,6 +1,6 @@
 <template>
     <div id="nearby-store">
-        <Header title="附近体验店" /> 
+        <Header title="查找体验店" /> 
         <Select />
         <Local />
         <Box  :box="box"/>

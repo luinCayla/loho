@@ -43,17 +43,8 @@
             //http://m.loho88.com/search/?e=222&page=1
             axios.get('/api/search/?e='+pid+'&page=1').then(res=>{
 
-                console.log(res.data.result)
-                console.log(this.$route.params.cid)
-                if(this.$route.params.cid=null){
-                  alert(1)
-                }else{
-
-                    this.dataList = res.data.result.data;
-                }
-
-
-           
+                this.dataList = res.data.result.data;
+               
             })
             //  console.log( this.$route )
         
