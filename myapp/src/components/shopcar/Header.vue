@@ -1,13 +1,13 @@
 <template>
     <header id="shop-head" class="public-head">
-        <router-link to="/home" class="icon"> 
+        <router-link to="/home" class="icon-back"> 
             <i class="iconfont icon-left" ></i>
         </router-link>       
         <div class="goleft" >
             <i class="iconfont icon-shopping" ></i>
             购物车
         </div>                                    
-        <div  class="icon"  @click="changeType">
+        <div class="icon"  @click='changeType'>
              <i class="iconfont icon-caidan" ></i>
         </div>
     </header>
@@ -15,7 +15,7 @@
 
 
 <script>
-    import bus from '../../modules/bus'
+import bus from '../../modules/bus'
     export default {
         name: 'shop-header',
          props:{

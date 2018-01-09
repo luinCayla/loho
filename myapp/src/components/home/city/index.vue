@@ -1,7 +1,8 @@
 <template>
     <div id="city" class="add-top">
-        <Header title="选择城市"   />
-        <Menue />
+        <Header title="选择城市" />
+            
+      
         <all-city />
     </div>
 

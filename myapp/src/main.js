@@ -18,9 +18,16 @@ import '@/style/usage/app.scss'
 
 //按需引入部分组件
 import { Swipe, SwipeItem } from 'mint-ui';
+import { Field } from 'mint-ui';
+import { Button } from 'mint-ui';
+import { Popup } from 'mint-ui';
+
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Field.name, Field);
+Vue.component(Button.name, Button);
+Vue.component(Popup.name, Popup);
 
 
 

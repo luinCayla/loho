@@ -52,7 +52,7 @@
                 let that = this;
                 //http://m.loho88.com/index
                 axios.get('/api/index').then( res =>{
-                    console.log(res.data.result)
+                     console.log(res.data.result)
                     that.bans = res.data.result.focus;
                     that.menu = res.data.result.cates;
                     that.imgsrc = res.data.result.ad[0].pic;

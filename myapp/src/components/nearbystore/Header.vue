@@ -1,16 +1,17 @@
 <template>
-    <header id="home-head" class="home-head">
-        <router-link to="/city" class="head-city">
-            <span>北京</span> 
-            <i class="iconfont icon-xia" ></i>
+    <header id="near-head" class="near-head">
+        <router-link to="/" class="head-city">
+           
+            <i class="iconfont icon-left" ></i>
         </router-link>
-        <div class="head-logo"></div>            
-        <router-link to="/shopcar" class="icon">
+        <div class="near-zi">查找体验店</div>            
+        <router-link to="/" class="head-cart">
              <i class="iconfont icon-shopcart" ></i>
         </router-link>
-         <router-link to="/login" class="icon">
+         <router-link to="/" class="head-peo">
              <i class="iconfont icon-ren" ></i>
         </router-link>
+        
     </header>
 </template>
 
@@ -18,7 +19,7 @@
 
 
     export default {
-        name: 'home-header',
+        name: 'near-header',
         data () {
             return {
                 

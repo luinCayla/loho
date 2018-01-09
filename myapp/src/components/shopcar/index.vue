@@ -8,7 +8,6 @@
 
 <script>
 
-
     import Header from './Header';
      import Hide from '../groupbuying/Hide';
 
