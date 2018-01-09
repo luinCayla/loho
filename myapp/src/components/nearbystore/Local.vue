@@ -3,10 +3,12 @@
        
         <div class="local-nav">
             <div class="local-left list-m" >
-                北京共17家体验店（全国249家）
+                北京共17家体验店（全国<span class="local-color">{{local}}</span>
+                家）
             </div>
             <div class="local-right list-m" >
                 <span>北京</span> 
+
                 <i class="iconfont icon-xia" ></i>
             </div>
             <router-view></router-view>
@@ -18,7 +20,8 @@
 <script>
     export default {
         name:'local-box',
-        data (){
+        props:['local'],
+        data :function(){
             return {
                 //isShow:false
             }
@@ -29,6 +32,13 @@
     }
 </script>
 <style scoped>
-
-
+.local-color{
+    color:#e8343b;
 }
+
+</style>
+
+
+
+
+

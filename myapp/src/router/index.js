@@ -3,11 +3,13 @@ import Router from 'vue-router'
 import Home from '@/components/home'
 import GroupBuying from '@/components/groupbuying'
 import Service from '@/components/Service'
-import NearbyStore from '@/components/NearbyStore'
+import NearbyStore from '@/components/nearbystore'
 import Mime from '@/components/mime'
 import City from '@/components/home/city'
 import ShopCar from '@/components/shopcar'
 import Register from '@/components/mime/Register'
+import AppOn from '@/components/near/AppOn'
+import AppNow from '@/components/near/AppNow'
 
 Vue.use(Router)
 
@@ -32,8 +34,14 @@ export default new Router({
         },
         {
             path: '/nearbystore',
-            name: 'nearbystore',
-            component: NearbyStore
+            //name: 'nearbystore',
+            component: NearbyStore,
+            children: [
+                     {path:'',redirect: 'now',name:'nearbystore'},
+                     {path:'now',component:AppNow,name:'now'},
+                     {path:'on',component:AppOn,name:'on'}
+
+                   ]
         },
         {
             path: '/mime',
