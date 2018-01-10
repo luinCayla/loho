@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 import Header from './Header'
 import Hide from '../groupbuying/Hide'

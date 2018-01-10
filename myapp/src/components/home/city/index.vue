@@ -11,8 +11,9 @@
 <script>
 
 
-    import Header from '../../public/Header.vue'
-    import AllCity from './AllCity'
+    import Header from '../../public/Header.vue';
+    import AllCity from './AllCity';
+    import Menue from '../../public/Menue';
 
     export default {
         name: 'city',
@@ -22,7 +23,7 @@
             }
         },
         components:{
-           Header,AllCity
+           Header,AllCity,Menue
         },
         methods:{
            

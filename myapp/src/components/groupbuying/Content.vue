@@ -2,7 +2,11 @@
   <div class="content">
     <div class="main">
       <div class="pic">
-        <img class="parw-100" src="http://img2.loho88.com/images/activ_m/5a1b8c6c7f8b9a3b008b4567/1513549371494809876.jpg" >
+        <router-link to='/details'>
+           <img class="parw-100" src="http://img2.loho88.com/images/activ_m/5a1b8c6c7f8b9a3b008b4567/1513549371494809876.jpg" >
+        </router-link>
+        <router-view></router-view>
+       
       </div>
 
       <div class="item-info">
@@ -225,12 +229,8 @@
         </div>
       </div>
     </div>
-
-
-
-
-
   </div>
+  
 </template>
 
 <script>

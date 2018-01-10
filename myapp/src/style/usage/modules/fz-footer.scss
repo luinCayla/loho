@@ -1,0 +1,31 @@
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+   a{
+       height: .6rem;
+       text-align: center;
+       float: left;
+       width: 1rem;
+
+    &:nth-child(3){
+        width: 60%;
+        background: orange;
+        line-height: .6rem;
+        color: #fff;
+    }
+   
+   }
+   .coom{
+        width: 20%;
+        color: #000;
+        background: #fff;
+    i{
+       display: block;
+       padding-top: .07rem;
+    }
+    span{
+        display: block;
+    }
+}
+}
