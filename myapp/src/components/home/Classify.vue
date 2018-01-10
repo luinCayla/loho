@@ -1,6 +1,6 @@
 <template>
     <ul class="home-classify">
-        <li v-for="(item,i) of classify" :key="i" class="cla-top">
+        <router-link tag="li" v-for="(item,i) of classify" :key="i" class="cla-top" :to='{name:"details"}'>
             <div class="rec-title">
                 <h2>{{item.title.word}}</h2>
                 <span>{{item.more.word}}</span>
@@ -8,7 +8,7 @@
             <div class='rec-img'>
                 <img :src="item.img.pic" alt="">
             </div>       
-            <div class="rec-content ">
+            <div class="rec-content " >
                 <div class="cla-left">
                     <h4>{{item.show[0].tag}}</h4>
                     <p>{{item.show[0].tag_en}}</p>
@@ -27,7 +27,7 @@
                     </li>
                 </ol>
             </div>
-        </li>
+        </router-link>
     </ul>
 </template>
 

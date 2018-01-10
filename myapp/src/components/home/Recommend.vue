@@ -8,11 +8,11 @@
             <img :src="popular.img.pic" alt="">
         </div>       
         <ul class='rec-caption'>
-            <li v-for="pop in popular.show" :key='pop.gid'>
+            <router-link tag="li" v-for="pop in popular.show" :key='pop.gid' :to='{name:"details"}'>
                 <h4>{{pop.tag}}</h4>
                 <p>{{pop.tag_en}}</p>
                 <img :src="pop.pic" alt="">
-            </li>
+           </router-link>
         </ul>
         
     </div>

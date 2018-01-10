@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="footer">
+  <div class="detail-footer">
         <a class="coom">
             <i class="iconfont icon-c-service"></i>
             <span>客服</span>

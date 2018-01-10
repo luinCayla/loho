@@ -2,7 +2,6 @@
 
 <template>
   <div class="eva" >
-      没有更多评价了   （0）
     <div class="k">------看了又看------</div>
     <div class="y">------已经到底了------</div>
   </div>

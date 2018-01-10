@@ -1,5 +1,5 @@
 <template>
-  <div id="explain">
+  <div class="detail-explain">
       <div class="introduct">
         <p class="small-text">价值760元 1.600 MR-8非球面单光镜片配镜套餐团购券，
           仅售399元</p>
@@ -62,7 +62,7 @@
 
  import bus from '../../modules/bus'
  export default {
-   name:'explain',
+   name:'detail-explain',
     data(){
         return{
             isShow:false

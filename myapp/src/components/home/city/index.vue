@@ -1,8 +1,7 @@
 <template>
     <div id="city" class="add-top">
         <Header title="选择城市" />
-            
-      
+                  
         <all-city />
     </div>
 
@@ -10,10 +9,8 @@
 
 <script>
 
-
-    import Header from '../../public/Header.vue';
+    import Header from '../../public/Header';
     import AllCity from './AllCity';
-    import Menue from '../../public/Menue';
 
     export default {
         name: 'city',
@@ -23,7 +20,7 @@
             }
         },
         components:{
-           Header,AllCity,Menue
+           Header,AllCity
         },
         methods:{
            

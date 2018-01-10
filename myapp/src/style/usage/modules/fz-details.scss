@@ -1,228 +1,235 @@
-
-#d-header{
-    width: 100%;
-    height: .5rem;
-    background: #fff;
-    a{
-        color: #000;
-        line-height: .5rem;
-        font-size: .28rem;
-    }
-    .toleft{
-        float: left;
-    }
-    h5{
-        float: right;
-        color: #000;
-        font-size: .28rem;
-        line-height: .5rem;
-    }   
-    .tomiddle{
-        padding-right: .3rem;
-        float: right;
-    }
-}
-
-
-.home-ban{
-    .img-box{
+.home-ban {
+    .img-box {
         padding-top: .8rem;
         // overflow: hidden;
         background: #fff;
         height: 2.63rem;
-        img{
+        img {
             width: 100%;
-            height:1.63rem;
+            height: 1.63rem;
         }
     }
-    .shade{
+    .shade {
         position: relative;
         width: 100%;
         height: .8rem;
-        padding-top:.1rem;
-        background: -webkit-linear-gradient(top,#fff,#c8c8c8
-       );
-        span{
+        padding-top: .1rem;
+        background: -webkit-linear-gradient(top, #fff, #c8c8c8);
+        span {
             display: block;
             position: relative;
             top: 80%;
             left: 48%;
             width: .09rem;
-            height:.09rem;
+            height: .09rem;
             background: red;
             border-radius: 50%;
         }
     }
-    
-
 }
 
-#explain{
+.detail-explain {
     margin-top: 1.6rem;
-  
-    
-    .introduct{  
+    .introduct {
         background: #fff;
         border-bottom: 1px solid #c8c8c8;
         overflow: hidden;
         padding-top: .1rem;
-        .small-text{
+        .small-text {
             float: left;
             padding-left: .1rem;
-           
             width: 2.88rem;
-            height:.44rem;
+            height: .44rem;
         }
-        .share-ex{
-            position: relative;           
+        .share-ex {
+            position: relative;
             float: right;
             padding-right: .1rem;
             margin-bottom: .1rem;
             border-left: 1px solid #c8c8c8;
-            span,p{
+            span,
+            p {
                 padding-left: .1rem;
             }
         }
-       
     }
-    .share-sh{
+    .share-sh {
         width: 1.73rem;
         height: .55rem;
         background: #000;
         position: absolute;
-        top:0;
+        top: 0;
         right: 50px;
-        a{
-            font-size: .3rem;   
-           
+        a {
+            font-size: .3rem;
         }
-        .wx{ 
+        .wx {
             position: relative;
-            left:.1rem;
+            left: .1rem;
             line-height: .55rem;
         }
-        .qq{ 
+        .qq {
             position: relative;
-            left:.4rem;
+            left: .4rem;
             line-height: .55rem;
         }
-        .wb{ 
+        .wb {
             position: relative;
-            left:.65rem;
+            left: .65rem;
             line-height: .55rem;
         }
     }
-    ul{
+    ul {
         background: #fff;
         height: .52rem;
         display: flex;
         justify-content: space-between;
-        li{
+        li {
             line-height: .52rem;
-           
-            span{
+            span {
                 color: #e8343b;
                 font-size: 20px;
                 padding-left: .1rem;
             }
         }
-        .number{
-            i{
+        .number {
+            i {
                 padding-right: .1rem;
             }
         }
     }
-    .gray{
+    .gray {
         overflow: hidden;
         // background: #c8c8c8;
         height: .4rem;
         line-height: .4rem;
-        .left{
+        .left {
             float: left;
-            
         }
-        .rig{
+        .rig {
             float: left;
-            i{
+            i {
                 padding-left: .1rem;
             }
         }
     }
-    .position{
+    .position {
         background: #fff;
         padding-bottom: .1rem;
         border-bottom: 2px solid #c8c8c8;
-        .sea{
+        .sea {
             height: .4rem;
             line-height: .4rem;
             padding-left: .1rem;
         }
-        .length{
+        .length {
             height: .18rem;
             line-height: .18rem;
-            i{
+            i {
                 padding-left: .1rem;
                 color: #000;
             }
-            span{
+            span {
                 // padding-left: .05rem;
                 font-size: 12px;
-                em{
+                em {
                     color: orange;
                     padding-left: .1rem;
                 }
             }
         }
-        .det{
+        .det {
             width: 100%;
-            height:.48rem;
+            height: .48rem;
             @include flexbox();
-            @include justify-content(space-between) ;
-           
-            p{
+            @include justify-content(space-between);
+            p {
                 display: inline-block;
                 font-size: .07rem;
-               
-                padding-top:.1rem;
+                padding-top: .1rem;
                 padding-left: .1rem;
-              
             }
-            span{
+            span {
                 line-height: .48rem;
-               padding-right:.1rem;
+                padding-right: .1rem;
                 font-size: .3rem;
                 color: red;
             }
         }
     }
-    .store{
+    .store {
         width: 100%;
         height: .48rem;
         line-height: .48rem;
         background: #fff;
         @include flexbox();
-        @include justify-content(space-between) ;
-        a{
-           
+        @include justify-content(space-between);
+        a {
             color: #000;
             padding-left: .1rem;
             // font-size: 12px;
             // @include flex();
-            em{
+            em {
                 color: red;
             }
         }
-        i{
-           
+        i {
             font-size: 20px;
         }
-        
     }
-    .blan{
+    .blan {
         width: 100%;
         height: .1rem;
         // background:#c8c8c8;
     }
-    
 }
 
+.detail-choose {
+    background: #fff;
+    height: .5rem;
+    line-height: .5rem;
+    a {
+        text-align: center;
+        width: 33%;
+        font-size: .15rem;
+        display: block;
+        float: left;
+        color: #000;
+        &:nth-child(2) {
+            border-left: 1px solid rgb(209, 208, 208);
+        }
+        &:nth-child(3) {
+            border-left: 1px solid rgb(209, 208, 208);
+        }
+    }
+}
+
+.detail-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    a {
+        height: .6rem;
+        text-align: center;
+        float: left;
+        width: 1rem;
+        &:nth-child(3) {
+            width: 60%;
+            background: orange;
+            line-height: .6rem;
+            color: #fff;
+        }
+    }
+    .coom {
+        width: 20%;
+        color: #000;
+        background: #fff;
+        i {
+            display: block;
+            padding-top: .07rem;
+        }
+        span {
+            display: block;
+        }
+    }
+}

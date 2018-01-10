@@ -8,10 +8,21 @@
             <router-link to="/shopcar" class="icon">
                 <i class="iconfont icon-shopcar" ></i>
             </router-link>
-            <router-link to="/" class="icon"   @click="changeType" >
+            <a class="icon" @click="changeType" >
                 <i class="iconfont icon-memu" ></i>
+            </a>
+        </div>  
+
+        <div class="public-menu" v-if="isShow" >
+            <router-link  to='/mime'>
+                <i class="iconfont icon-mime"></i>
+                <em>会员中心</em>
+             </router-link>
+            <router-link  to='/home'>
+                <i class="iconfont icon-home"></i>  
+                <em>首页 </em>
             </router-link>
-        </div>                                   
+        </div>                                 
     </header>
 </template>
 
@@ -28,13 +39,13 @@
         },
         data () {
             return {
-              
+               isShow:false
             }
         },
         methods:{
             changeType(){           
-                bus.$emit("change-type")
-        }
+                this.isShow = !this.isShow;
+            }
         } 
     }
 

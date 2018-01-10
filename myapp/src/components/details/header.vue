@@ -20,8 +20,8 @@ export default {
   },
   methods:{
     changeType(){           
-                bus.$emit("change-type")
-            }
+        bus.$emit("change-type")
+    }
   }
 }
 </script>

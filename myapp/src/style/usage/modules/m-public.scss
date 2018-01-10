@@ -84,3 +84,39 @@
         }
     }
 }
+
+.public-menu {
+    border: 1px solid #e1e1e1;
+    font-weight: bold;
+    background: #fff;
+    position: fixed;
+    top: .6rem;
+    right: .05rem;
+    // padding: .1rem .3rem .1rem .2rem;
+    a {
+        display: block;
+        width: 1.47rem;
+        height: .46rem;
+        line-height: .46rem;
+        color: #999;
+        i {
+            font-size: 22px;
+            vertical-align: middle;
+            padding: 0 .1rem 0 .25rem;
+        }
+        // text-align: center;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 6px inset;
+        border-color: transparent transparent #e1e1e1;
+        border-bottom-style: solid;
+        position: absolute;
+        top: -12px;
+        right: .17rem;
+        z-index: 89;
+    }
+}
