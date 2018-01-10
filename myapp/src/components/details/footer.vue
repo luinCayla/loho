@@ -2,11 +2,11 @@
 
 <template>
   <div class="footer">
-        <a>
+        <a class="coom">
             <i class="iconfont icon-c-service"></i>
             <span>客服</span>
         </a>
-        <a>
+        <a class="coom">
             <i class="iconfont icon-collect"></i>
             <span>收藏</span>
         </a>
