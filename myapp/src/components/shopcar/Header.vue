@@ -4,7 +4,7 @@
             <i class="iconfont icon-left" ></i>
         </router-link>       
         <div class="goleft" >
-            <i class="iconfont icon-shopping" ></i>
+            <i class="iconfont icon-cart" ></i>
             购物车
         </div>                                    
         <div class="icon"  @click='changeType'>

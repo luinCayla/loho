@@ -1,6 +1,5 @@
 <template>
     <div id="app">  
-        
               
         <router-view></router-view>  
     </div>
@@ -20,7 +19,7 @@ export default {
         }
     },
     components:{
-      
+
     },
     methods:{
                

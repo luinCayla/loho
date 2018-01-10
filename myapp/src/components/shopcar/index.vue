@@ -1,7 +1,15 @@
 <template>
-    <div id="shopcar">
+    <div id="shopcar" class="add-top">
         <Header />
-        <Hbuying />
+        <Hide />
+       
+        <Cart  v-if="isshow" />
+        <div class="shop-box"  else> 
+            <i class="iconfont icon-cart"></i>
+            <p>您的购物车尚未添加商品</p>
+            <p>去 <router-link to="/hone">Loho88眼镜生活</router-link>购买商品</p>
+        </div>
+      
     </div>
 
 </template>
@@ -9,17 +17,20 @@
 <script>
 import axios from 'axios'
 
-    import Header from './Header'
-    import Hbuying from '../groupbuying/Hide'
-    export default {
+import Header from './Header'
+import Hide from '../groupbuying/Hide'
+import Cart from './Cart'
+
+   
+   export default {
         name: 'shopcar',
         data () {
             return {
-                
+                isshow:false
             }
         },
         components:{
-            Header,Hbuying
+            Header,Hide,Cart
         },
         methods:{
 

@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import store from './store'
 
 // 引入全部组件
 // import MintUI from 'mint-ui'
@@ -39,6 +40,7 @@ Vue.config.productionTip = false
 new Vue({
     el: '#app',
     router,
+    store,
     template: '<App/>',
     components: { App }
 })
