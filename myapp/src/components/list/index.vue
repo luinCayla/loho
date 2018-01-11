@@ -7,7 +7,7 @@
             <li>价格</li>
             <li>筛选<i class="iconfont icon-sifting"></i></li>
         </ul>    
-        <lists :dataList ='dataList' />
+        <Lists :dataList ='dataList' />
 
         <BackTop v-back-top v-scroll-show:300='isBackShow' :isShow='isBackShow' />
        
@@ -19,7 +19,7 @@
     import axios from 'axios';
 
     import Header from '../public/Header'
-    import lists from './lists'
+    import Lists from './Lists'
     import BackTop from '../public/BackTop'
 
     export default {
@@ -32,7 +32,7 @@
             }
         },
         components:{
-           Header,lists,BackTop
+           Header,Lists,BackTop
         },
         methods:{
            

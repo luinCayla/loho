@@ -3,7 +3,7 @@
         <p class="add-mar">
             <router-link to="">
                 <i class="iconfont icon-dingwei"></i>
-                <span>当前城市：北京</span>               
+                <span>当前城市：{{city}}</span>               
             </router-link>
           
             <router-link to="">
@@ -21,15 +21,15 @@
         <div class="add-mar">
             <p>全部城市</p>
             <ul class="all-city-code">
-                <li v-for="(code,i) in letters" :key='i'>{{code}}</li>
+                <a v-for="(code,i) in letters" :key='i' :href="'#'+ code" >{{code}}</a>
                   
             </ul>
         </div>
-        <ol class="all-city-name">
+        <ol class="all-city-name " >
             <li v-for="(code,i) in list" :key="i">
-                <h5>{{i}}</h5>
+                <a :id='i'>{{i}}</a>
                 <ul class="all-city-code cityname">
-                    <li v-for="c in code" :key="c.cityId">{{c.cityName}}</li>
+                    <li v-for="c in code" :key="c.cityId"  :href="i">{{c.cityName}}</li>
                 </ul>              
             </li>
         </ol>
@@ -52,7 +52,8 @@
                     code:'',
                     name:[]
 
-                }
+                },
+                city:''
             }
         },       
         methods:{
@@ -63,8 +64,15 @@
                     // console.log(res.data.result)
                     that.hot = res.data.result.hot;
                     that.letters = res.data.result.letters;
-                    that.list = res.data.result.list;
-                    
+                    that.list = res.data.result.list;                   
+                });
+
+                //http://m.loho88.com/store/302
+                axios.get('/api/store/302').then((res)=>{                  
+                   
+                    that.city = res.data.result.city;
+
+                      
                 })
             }
         },

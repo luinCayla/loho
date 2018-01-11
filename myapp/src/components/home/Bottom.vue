@@ -40,7 +40,7 @@
             }
         },
         methods:{
-           isShowInfo(){
+            isShowInfo(){
                this.isShow = !this.isShow;
            }
         } 

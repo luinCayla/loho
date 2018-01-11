@@ -1,10 +1,9 @@
 <template>
-    <div   class="select-box app-box">
+    <div class="select-box app-box">
        
-        <div class="movied-nav">
-            
-            <router-link class="movie-left list-m" :to="{name:'now'}"><span>列表</span></router-link><!--:to 相对一个跳转的方向-->
-            <router-link class="movie-right list-m" :to="{name:'on'}"><span>地图</span></router-link>
+        <div class="movied-nav">            
+            <router-link class="movie-left list-m" :to="{name:'stores'}"><span>列表</span></router-link><!--:to 相对一个跳转的方向-->
+            <router-link class="movie-right list-m" :to="{name:'map'}"><span>地图</span></router-link>
             <router-view></router-view>
         </div>  
 

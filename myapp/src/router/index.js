@@ -10,8 +10,8 @@ import Login from '@/components/login'
 import City from '@/components/home/city'
 import ShopCar from '@/components/shopcar'
 import Register from '@/components/login/Register'
-import AppOn from '@/components/nearbystore/AppOn'
-import AppNow from '@/components/nearbystore/AppNow'
+import Maps from '@/components/nearbystore/Maps'
+import Stores from '@/components/nearbystore/Stores'
 import Shezhi from '@/components/mime/info/Shezhi'
 import Paying from '@/components/mime/order/paying'
 import Receiving from '@/components/mime/order/Receiving'
@@ -63,9 +63,9 @@ export default new Router({
             //name: 'nearbystore',
             component: NearbyStore,
             children: [
-                { path: '', redirect: 'now', name: 'nearbystore' },
-                { path: 'now', component: AppNow, name: 'now' },
-                { path: 'on', component: AppOn, name: 'on' }
+                { path: '', redirect: 'stores', name: 'nearbystore' },
+                { path: 'stores', component: Stores, name: 'stores' },
+                { path: 'map', component: Maps, name: 'map' }
 
             ]
         },

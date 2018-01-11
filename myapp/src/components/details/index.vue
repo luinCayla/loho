@@ -8,8 +8,7 @@
         <Picture />
         <Footer />
        <BackTop v-back-top v-scroll-show:300='isBackShow' :isShow='isBackShow' />
-        <!-- <Evaluate /> -->
-        <!-- <Argument /> -->
+      
     </div>
 </template>
 
@@ -18,13 +17,10 @@
 import axios from 'axios'
 
 import Header from '../public/Header';
-import Banner from './banner';
-import Explain from './explain';
-import Evaluate from './evaluate';
-// import Argument from './argument';
-
-import Choose from './choose';
-import Footer from './footer';
+import Banner from './Banner';
+import Explain from './Explain';
+import Choose from './Choose';
+import Footer from './Footer';
 import BackTop from '../public/BackTop'
 
 export default {
