@@ -45,20 +45,12 @@ export default {
         
     },
      mounted(){
-         // console.log(this.$route)
-        // console.log(this.$route.params)
       
         var gid =this.$route.params.gid;
-        // //http://m.loho88.com/goods/peddle/5230
-        // axios.get('/api/goods/peddle/'+ gid ).then( res=>{
-
-        
-            
-        // })
 
          //http://m.loho88.com/goods/5230
         axios.get('/api/goods/'+ gid ).then( res=>{
-          console.log(res)
+        //   console.log(res)
           this.goodsName = res.data.result.info.goodsName;
           this.promiseTag = res.data.result.info.promiseTag;
           this.pics = res.data.result.info.pics;
