@@ -8,7 +8,7 @@
             <img :src="popular.img.pic" alt="">
         </div>       
         <ul class='rec-caption'>
-            <router-link tag="li" v-for="pop in popular.show" :key='pop.gid' :to='{name:"details"}'>
+            <router-link tag="li" v-for="pop in popular.show" :key='pop.gid' :to="'/details/'+pop.gid" >
                 <h4>{{pop.tag}}</h4>
                 <p>{{pop.tag_en}}</p>
                 <img :src="pop.pic" alt="">

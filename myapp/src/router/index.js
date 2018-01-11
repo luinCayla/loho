@@ -46,13 +46,13 @@ export default new Router({
             path: '/groupbuying',
             name: 'groupbuying',
             component: GroupBuying,
-            },
-            {
-                path:'/details',
-                name:'details',
-                component: Details,
-               
-            },
+        },
+        {
+            path: '/details/:gid',
+            name: 'details',
+            component: Details,
+
+        },
         {
             path: '/service',
             name: 'service',

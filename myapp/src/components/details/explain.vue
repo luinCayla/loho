@@ -1,8 +1,7 @@
 <template>
   <div class="detail-explain">
       <div class="introduct">
-        <p class="small-text">价值760元 1.600 MR-8非球面单光镜片配镜套餐团购券，
-          仅售399元</p>
+        <p class="small-text">{{goodsName}}</p>
           <div class="share-ex">
             <span  class="iconfont icon-share "></span>
             <p @click='changeShow' >分享</p>
@@ -18,22 +17,19 @@
       
      
      <ul>
-        <li><span>￥399</span></li>
+        <li><span>￥{{price}}</span></li>
         <li class="move">快递：免运费</li>
-        <li class="number"><i>0人已购买</i></li>
+        <li class="number"><i>{{salesNum}}人已购买</i></li>
      </ul>
 
-     <div class="gray">
-        <div class="left">
+     <ol class="gray">
+        <li class="left" v-for="(nav,i) in promiseTag" :key="i" >
           <i class="iconfont icon-attention"></i>
-          <span>免费验光，7天退换</span>
-        </div>
-        <div class="rig">
-          <i class="iconfont icon-attention"></i>
-          <span>免费保养</span>
-        </div>
+          <span>{{nav}}</span>
+        </li>
+        
 
-     </div>
+     </ol>
 
      <div class="position">
        <p class="sea">东海缤纷天地店</p>
@@ -42,8 +38,7 @@
          <span>0.39km  <em>免费预约直营店验光</em></span>
        </div>
        <div class="det">
-          <p>地址：深圳市福田区深南大道7888号东海缤纷天地负二层
-            B2002.2003铺</p>
+          <p>地址：北京市海淀区学清路甲8号圣熙8号购物中心一层A015 </p>
           <span class="iconfont icon-tel"></span>
        </div>
      </div>
@@ -59,25 +54,40 @@
 </template>
  
  <script>
+  import axios from 'axios'
 
- import bus from '../../modules/bus'
  export default {
    name:'detail-explain',
+   props:['goodsName','promiseTag'],
     data(){
         return{
-            isShow:false
+            isShow:false,
+            price:"",
+            salesNum:"",
+           
         }
     },
     mounted(){
-        bus.$on('change-show',function(){
-               this.isShow = !this.isShow;
-           }.bind(this))
+
+        var gid =this.$route.params.gid;
+        //http://m.loho88.com/goodsInfo/5230
+        axios.get('/api/goodsInfo/'+ gid ).then( res=>{
+          // console.log(res)
+          this.price = res.data.result.price;
+          this.salesNum = res.data.result.salesNum;
+            
+        })
+       
+
+
+
+
     },
      methods:{
-            changeShow(){           
-                bus.$emit("change-show")
+        changeShow(){           
+          this.isShow = !this.isShow;
         }
-        }
+    }
 
  }
  </script>

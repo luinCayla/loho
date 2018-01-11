@@ -7,7 +7,7 @@
         <div class="shop-box"  else> 
             <i class="iconfont icon-cart"></i>
             <p>您的购物车尚未添加商品</p>
-            <p>去 <router-link to="/hone">Loho88眼镜生活</router-link>购买商品</p>
+            <p>去 <router-link to="/home">Loho88眼镜生活</router-link>购买商品</p>
         </div>
       
     </div>

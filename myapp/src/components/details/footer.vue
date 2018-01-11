@@ -10,7 +10,7 @@
             <i class="iconfont icon-collect"></i>
             <span>收藏</span>
         </a>
-        <a >立即收藏</a>
+        <a >加入购物车</a>
   </div>
 </template>
 
