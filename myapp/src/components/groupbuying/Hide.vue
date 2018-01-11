@@ -1,5 +1,5 @@
 <template>
-    <nav class="head-menu "  style="display: block;" v-if="isShow">
+    <nav class="head-menu"  style="display: block;" v-if="isShow">
         <router-link class = "icon-home3 iconfont icon-house"  to="/home">首页</router-link>
         <router-link class = "icon-user iconfont icon-member"  to="/mime">会员中心</router-link>
         <router-link class = "icon-cart iconfont icon-shopping"  to="/shopcar">购物车</router-link>
