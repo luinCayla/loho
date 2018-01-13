@@ -1,8 +1,8 @@
 <template>
     <header id="shop-head" class="public-head">
-        <router-link to="/home" class="icon-back"> 
+        <a class="icon-back" href="javascript:window.history.go(-1)"> 
             <i class="iconfont icon-left" ></i>
-        </router-link>       
+        </a>       
         <div class="goleft" >
             <i class="iconfont icon-cart" ></i>
             购物车

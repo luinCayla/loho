@@ -13,6 +13,7 @@
  import Header from '../public/Header'
  import Select from './Select';
 
+
     export default {
         name: 'nearby-store',
         data () {
@@ -21,7 +22,7 @@
             }
         },
         components:{
-            Header,Select,
+            Header,Select
         },
         methods:{
            

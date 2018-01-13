@@ -10,13 +10,11 @@
                     <span>{{city}}</span> 
                     <i class="iconfont icon-xia" ></i>
                 </router-link>
-                <router-view></router-view>
             </div>  
         </div>
 
-
         <div class="box-box app-box">
-        <div v-for="item in stores" :key="item.id" class="box-large">
+            <div v-for="item in stores" :key="item.id" class="box-large">
                 <div   class="box-nav">
                     <div class="box-small" >
                         <span class="box-top">{{item.catName}}</span>
@@ -47,8 +45,6 @@
             </div>
         </div>
     </div>
-
-
 
 </template> 
 

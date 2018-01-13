@@ -1,17 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
+import City from '@/components/home/city'
 import GroupBuying from '@/components/groupbuying'
 import Details from '@/components/details'
 import Service from '@/components/service'
 import NearbyStore from '@/components/nearbystore'
-import Mime from '@/components/mime'
-import Login from '@/components/login'
-import City from '@/components/home/city'
-import ShopCar from '@/components/shopcar'
-import Register from '@/components/login/Register'
-import Maps from '@/components/nearbystore/Maps'
 import Stores from '@/components/nearbystore/Stores'
+import Maps from '@/components/nearbystore/Maps'
+import Login from '@/components/login'
+import TelLogin from '@/components/login/TelLogin'
+import UserLogin from '@/components/login/UserLogin'
+
+import Register from '@/components/login/Register'
+import ShopCar from '@/components/shopcar'
+import Mime from '@/components/mime'
 import Shezhi from '@/components/mime/info/Shezhi'
 import Paying from '@/components/mime/order/paying'
 import Receiving from '@/components/mime/order/Receiving'
@@ -25,6 +28,7 @@ import MyEyeglass from '@/components/mime/message/MyEyeglass'
 import MyAddress from '@/components/mime/message/MyAddress'
 import MyPassword from '@/components/mime/message/MyPassword'
 import List from '@/components/list'
+import Filtrate from '@/components/list/filtrate'
 
 Vue.use(Router)
 
@@ -41,6 +45,11 @@ export default new Router({
             path: '/list/:cid/:tid/:tag',
             name: 'list',
             component: List
+        },
+        {
+            path: '/filtrate',
+            name: 'filtrate',
+            component: Filtrate
         },
         {
             path: '/groupbuying',
@@ -84,8 +93,14 @@ export default new Router({
             component: ShopCar
         }, {
             path: '/login',
-            name: 'login',
-            component: Login
+            // name: 'login',
+            component: Login,
+            children: [
+                { path: '', redirect: 'tellogin', name: 'login' },
+                { path: 'tellogin', component: TelLogin, name: 'tellogin' },
+                { path: 'userlogin', component: UserLogin, name: 'userlogin' }
+
+            ]
         },
         {
             path: '/register',

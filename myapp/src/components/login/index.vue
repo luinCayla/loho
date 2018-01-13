@@ -7,58 +7,17 @@
             <img src="../../assets/images/login-banner.png" alt="">
         </div>
         <div class="login-cap">
-            <div   @click="isShow=false" >手机号快速登录</div>
-            <span>|</span>
-            <div @click="isShow=true"  >账号密码登录</div>
+            <router-link  :to="{name:'tellogin'}" class="login-cap-left"> 手机号快速登录</router-link>   
+            <router-link :to="{name:'userlogin'}" class="login-cap-right">账号密码登录</router-link>
+       
+            <router-view></router-view>       
         </div>
 
-        <div  class="login-check-box" v-if="isShow">
-            <ul class="login-check" >
-                <li>
-                    <i class='iconfont icon-geren'></i>                    
-                    <input type="text" placeholder="请输入手机号">                               
-                </li>
-                <li>
-                    <i class='iconfont icon-suo'></i>
-                    <input type="text" placeholder="请输入密码">
-                </li>
-                <li class="wipe">
-                    <i class='iconfont icon-save'></i>
-                    <input type="text" placeholder="请输入验证码">
-                    <div class="img-code">
-                        <img :src="getImg" alt="" @click="getImgSrc">
-                    </div>
-                </li>
-            </ul>
-                <p class="forget-pswd">
-                    忘记密码？
-                </p>
 
-         </div>
-         <div clsass='login-check-box' v-else>
-            <ul class="login-check" >
-                <li>
-                    <i class='iconfont icon-phone'></i>
-                    <input type="text" placeholder="请输入您的手机号码">
-                </li>
-                <li>
-                    <i class='iconfont icon-save'></i>
-                    <input type="text" placeholder="请输入图片验证码">
-                    <div class="img-code">
-                        <img :src="getImg" alt="" @click="getImgSrc">
-                    </div>
-                </li>
-                <li class="wipe">
-                    <i class='iconfont icon-check'></i>
-                    <input type="text" placeholder="请输入短信验证码">
-                    <div class="send-code">发送验证码</div>
-                </li>               
-            </ul>
-         </div>
-       
+
 
         <div class="login-reg">
-            <router-link to="register">注册</router-link>
+            <router-link :to="{name:'register'}">注册</router-link>
             <router-link class="login-false" to='/mime'>登录</router-link>
         </div>
             
@@ -76,9 +35,8 @@
         name: 'login',
         data () {
             return {
-                isActive:false,
-                isShow:false,
-                getImg:'http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random(),
+              
+               
                
             }
         },
@@ -86,12 +44,9 @@
             Header
         },
         methods:{
-            getImgSrc(){//获取图片验证码
-                this.getImg ='http://m.loho88.com/code/mobile/getCaptchaCode?'+Math.random();
-            }
-
             
-        } 
+        }
+
     }
 
 
@@ -99,4 +54,10 @@
 
 <style scoped>
 
+.router-link-active{
+    
+    color:#e8343b;
+      border-bottom:3px solid #e8343b ;
+      
+}
 </style>

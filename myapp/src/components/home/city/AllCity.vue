@@ -1,12 +1,12 @@
 <template>
     <div  class="all-city">
         <p class="add-mar">
-            <router-link to="">
+            <router-link to="/home">
                 <i class="iconfont icon-dingwei"></i>
-                <span>当前城市：{{city}}</span>               
+                <span> 当前城市：{{city}}</span>               
             </router-link>
           
-            <router-link to="">
+            <router-link to="/home">
                <i class="iconfont icon-right"></i>
             </router-link>         
         </p>
