@@ -23,6 +23,7 @@ import { Field } from 'mint-ui';
 import { Button } from 'mint-ui';
 import { Popup } from 'mint-ui';
 import { Loadmore } from 'mint-ui';
+import { Picker } from 'mint-ui';
 
 
 Vue.component(Swipe.name, Swipe);
@@ -31,6 +32,7 @@ Vue.component(Field.name, Field);
 Vue.component(Button.name, Button);
 Vue.component(Popup.name, Popup);
 Vue.component(Loadmore.name, Loadmore);
+Vue.component(Picker.name, Picker);
 
 import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);
